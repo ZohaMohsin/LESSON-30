@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity 2</title>
+</head>
+<body>
+    <h2>API validation</h2>
+    <input type="number" id="inp1" min="50" max="100"
+    required><br><br>
+    <button onclick="validate()">OK</button>
+    <P>please enter numbers between 50 and 100</P>
+    <p id="p1"></p>
+    <script>
+        function validate(){
+            inpnum=document.getElementById("inp1");
+            if(!inpnum.checkValidity()){
+                document.getElementById("p1").innerHTML=inpnum.validateMessage;
+
+            }
+            else{
+                document.getElementById("p1").innerHTML="Input ok";
+            }
+        }
+    </script>
+</body>
+</html>
